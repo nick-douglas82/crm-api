@@ -2,9 +2,9 @@ import { env, exports } from 'cloudflare:workers'
 import { betterAuth } from 'better-auth'
 import { testUtils } from 'better-auth/plugins'
 import { describe, expect, it } from 'vitest'
-import { createAuth } from '../src/modules/auth/auth'
+import { createAuth } from './auth'
 import { drizzle } from 'drizzle-orm/d1'
-import { user as users } from '../src/db/auth.schema'
+import { user as users } from '../../db/auth.schema'
 
 describe('GET /api/me', () => {
   it('returns 401 when the user is not authenticated', async () => {

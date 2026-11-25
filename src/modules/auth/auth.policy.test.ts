@@ -1,6 +1,6 @@
 import { env } from 'cloudflare:workers'
 import { describe, expect, it } from 'vitest'
-import { isAllowedGithubAccount } from '../src/modules/auth/auth.policy'
+import { isAllowedGithubAccount } from './auth.policy'
 
 describe('GitHub account authorisation', () => {
   it('allows the approved GitHub account', () => {
